@@ -2,33 +2,45 @@
 
 void MainMenu::OnEnter()
 {
-    const int windowWidth = 1280;
-    const int windowHeight = 720;
+    const float windowWidth = 1280.f;
+    const float windowHeight = 720.f;
 
-    std::string backgroundFilePath = "Assets/Backgrounds/background.png";
-    std::string buttonFilePath = "Assets/GrayButton.png";
+    // Ce sont des placeholders.
+    std::string backgroundFilePath = "Assets/Backgrounds/Background_Knight.jpg";
+    std::string buttonStartPath = "Assets/ButtonStart.png";
+    std::string buttonLeavePath = "Assets/ButtonLeave.png";
     std::string fontFilePath = "Assets/Fonts/PlaywriteNZBasic-Regular.ttf";
 
     background = CreateGameObject<GameObject>();
     title = CreateGameObject<GameObject>();
     subTitle = CreateGameObject<GameObject>();
-    button = CreateGameObject<GameObject>();
+    buttonStart = CreateGameObject<GameObject>();
+    buttonLeave = CreateGameObject<GameObject>();
 
-    background->createComponent<Transform>(static_cast<float>(windowWidth) / 2, static_cast<float>(windowHeight) / 2);
+    background->createComponent<Transform>(windowWidth / 2, windowHeight / 2);
     background->createComponent<SpriteRenderer>(backgroundFilePath);
 
-    title->createComponent<Transform>(static_cast<float>(windowWidth) / 2, 100.f);
-    title->createComponent<TextComponent>(fontFilePath, "Slay the Knight", sf::Color::Red, sf::Color::Black, 2.f);
+    title->createComponent<Transform>(windowWidth / 2, 120.f);
+    title->createComponent<TextComponent>(fontFilePath, "Slay the Knight", sf::Color::Red, sf::Color::Black, 2.f, 75);
 
-    subTitle->createComponent<Transform>(static_cast<float>(windowWidth) / 2, 130.f);
-    subTitle->createComponent<TextComponent>(fontFilePath, "Version - Prototype", sf::Color::Red, sf::Color::Black, 2.f, 15);
+    subTitle->createComponent<Transform>(windowWidth / 2, 200.f);
+    subTitle->createComponent<TextComponent>(fontFilePath, "Version - Prototype", sf::Color::White, sf::Color::Black, 2.f, 30);
 
-    button->createComponent<Transform>(static_cast<float>(windowWidth) / 2, 300.f);
-    button->createComponent<SpriteRenderer>(buttonFilePath); // Alors.. Faudra changer la texture, svp.
-    button->createComponent<InputComponent>();
+    buttonStart->createComponent<Transform>(windowWidth / 2, 300.f);
+    buttonStart->createComponent<SpriteRenderer>(buttonStartPath);
+    buttonStart->createComponent<InputComponent>();
 
-    button->createComponent<ButtonComponent>([]() {
+    buttonStart->createComponent<ButtonComponent>([]() {
         SceneManager::getSceneManager()->getCurrentScene()->OnExit();
         SceneManager::getSceneManager()->setScene(new Level1);
+        });
+
+    buttonLeave->createComponent<Transform>(windowWidth / 2, 400.f);
+    buttonLeave->createComponent<SpriteRenderer>(buttonLeavePath);
+    buttonLeave->createComponent<InputComponent>();
+
+    buttonLeave->createComponent<ButtonComponent>([this]() {
+        SceneManager::getSceneManager()->getCurrentScene()->OnExit();
+        windowModule->getWindow().close(); // On devrait faire une fermeture plus propre du moteur.
         });
 }

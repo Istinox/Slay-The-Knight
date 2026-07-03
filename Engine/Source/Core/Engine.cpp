@@ -26,7 +26,7 @@ void Engine::Run() {
             sceneManager->getCurrentScene()->Start();
             sceneManager->setHasStartedScene(true);
 
-            windowTitle = "Horror Engine I (ver. 1.0.0) | " + sceneManager->getCurrentScene()->getName();
+            windowTitle = "Slay the Knight (ver. Prototype) | " + sceneManager->getCurrentScene()->getName();
             windowModule->setWindowName(windowTitle);
         }
 

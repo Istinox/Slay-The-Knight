@@ -9,7 +9,7 @@ void AnimationComponent::Start()
 	}
 
 	sf::Sprite& ownerSprite = owner->getComponent<SpriteRenderer>()->getSprite();
-	sf::FloatRect bounds = ownerSprite.getLocalBounds(); // étant donné que je prend les bounds locals, bah l'origine est buggé.
+	sf::FloatRect bounds = ownerSprite.getLocalBounds(); // étant donné qu'on prend les bounds locals, l'origine est un peu buggé.
 
 	imageHeight = ownerSprite.getTexture().getSize().y;
 	imageWidth = ownerSprite.getTexture().getSize().x;
