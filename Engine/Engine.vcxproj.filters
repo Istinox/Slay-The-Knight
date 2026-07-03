@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\Components">
+      <UniqueIdentifier>{796c257a-7393-4880-9247-cd3947270836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Components">
+      <UniqueIdentifier>{fec19c5e-5c4a-46c9-add9-e1617b9c3b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Others">
+      <UniqueIdentifier>{90a7c6e4-1fdf-4fd1-9aa6-e8abe6e241a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Others">
+      <UniqueIdentifier>{b03a9150-981b-4607-8be0-08b8d752b976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Managers">
+      <UniqueIdentifier>{4e543786-4656-443f-a733-b3966eabe9d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Managers">
+      <UniqueIdentifier>{e2ec24fc-9b8d-4515-9555-ea3b94fc57c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Components\HUD">
+      <UniqueIdentifier>{74cd9f52-794a-478a-83e5-1f29c6f6f354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Components\HUD">
+      <UniqueIdentifier>{a7f4838a-164d-413e-81f2-ce48fb480667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Modules">
+      <UniqueIdentifier>{c0adaa87-5e62-4de8-b37e-aa10dfe0efc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Modules">
+      <UniqueIdentifier>{4782daf1-4455-4d84-92e6-379d6cbe8deb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Core\Engine.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Component.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\SpriteRenderer.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\InputComponent.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\GameObject.cpp">
+      <Filter>Fichiers sources\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Scene.cpp">
+      <Filter>Fichiers sources\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\CollisionComponent.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\SceneManager.cpp">
+      <Filter>Fichiers sources\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\ResourceManager.cpp">
+      <Filter>Fichiers sources\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\TextComponent.cpp">
+      <Filter>Fichiers sources\Components\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\SoundComponent.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\ButtonComponent.cpp">
+      <Filter>Fichiers sources\Components\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Managers\CollisionManager.cpp">
+      <Filter>Fichiers sources\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\AnimationComponent.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\InputModule.cpp">
+      <Filter>Fichiers sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\ShaderComponent.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\WindowModule.cpp">
+      <Filter>Fichiers sources\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LevelEditor\LevelEditor.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\CameraComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\MusicComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\ShapeComponent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\RigidBody.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Core\Component.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\SpriteRenderer.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\InputComponent.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Core\GameObject.h">
+      <Filter>Fichiers d%27en-tête\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Core\Scene.h">
+      <Filter>Fichiers d%27en-tête\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Core\Engine.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Managers\ResourceManager.h">
+      <Filter>Fichiers d%27en-tête\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Managers\SceneManager.h">
+      <Filter>Fichiers d%27en-tête\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\TextComponent.h">
+      <Filter>Fichiers d%27en-tête\Components\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\CollisionComponent.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\SoundComponent.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Managers\CollisionManager.h">
+      <Filter>Fichiers d%27en-tête\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\ButtonComponent.h">
+      <Filter>Fichiers d%27en-tête\Components\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\AnimationComponent.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Modules\InputModule.h">
+      <Filter>Fichiers d%27en-tête\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\ShaderComponent.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Modules\WindowModule.h">
+      <Filter>Fichiers d%27en-tête\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\LevelEditor\LevelEditor.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\CameraComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\MusicComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\ShapeComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\RigidBody.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\CollisionType.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Levels">
+      <UniqueIdentifier>{e27c6f80-d254-49c8-89f8-9d0da70b4e61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Levels">
+      <UniqueIdentifier>{a724d306-8dd7-43a5-9e0e-c7f936c17456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Components">
+      <UniqueIdentifier>{7693c38c-3a7c-42a4-ae4d-35388cc3e18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Components">
+      <UniqueIdentifier>{0069cb83-e2d4-4aa7-8f23-5e92319f0fe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Shaders">
+      <UniqueIdentifier>{1092e951-bc79-4a1c-89fd-4a8c2120c22f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DebugLevel.cpp">
+      <Filter>Fichiers sources\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Level1.cpp">
+      <Filter>Fichiers sources\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MainMenu.cpp">
+      <Filter>Fichiers sources\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\PlayerController.cpp">
+      <Filter>Fichiers sources\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjects\Background.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjects\Player.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjects\EnemyKnight.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LevelCreator.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjects\Camera.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\RotateToMouse.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\DebugLevel.h">
+      <Filter>Fichiers d%27en-tête\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Level1.h">
+      <Filter>Fichiers d%27en-tête\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\MainMenu.h">
+      <Filter>Fichiers d%27en-tête\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\PlayerController.h">
+      <Filter>Fichiers d%27en-tête\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\GameObjects\Background.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\GameObjects\Player.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\GameObjects\EnemyKnight.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\LevelCreator.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\GameObjects\Camera.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Components\RotateToMouse.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\Light.frag">
+      <Filter>Fichiers sources\Shaders</Filter>
+    </None>
+    <None Include="Assets\Shaders\LightImproved.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\GrayButton.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\HorrorEngine_icon.jpg">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Tileset_Test.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\old_placeholder_chr_border_red.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\placeholder_chr.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\placeholder_chr_32x32.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\placeholder_chr_border_red.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\placeholder_chr2.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Sprites\placeholder_chr2_32x32.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Backgrounds\background.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Assets\Backgrounds\background_flower.jpg">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Levels\Level1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\Fonts\PlaywriteNZBasic-Regular.ttf" />
+  </ItemGroup>
+</Project>
