@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -137,7 +137,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Components\RotateToMouse.cpp" />
+    <ClCompile Include="Source\Components\HealthComponent.cpp" />
     <ClCompile Include="Source\GameObjects\Camera.cpp" />
     <ClCompile Include="Source\GameObjects\EnemyKnight.cpp" />
     <ClCompile Include="Source\GameObjects\Player.cpp" />
@@ -159,7 +159,7 @@
     <ClInclude Include="Header\MainMenu.h" />
     <ClInclude Include="Header\Components\PlayerController.h" />
     <ClInclude Include="Header\GameObjects\Player.h" />
-    <ClInclude Include="Header\Components\RotateToMouse.h" />
+    <ClInclude Include="Header\Components\HealthComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Light.frag" />

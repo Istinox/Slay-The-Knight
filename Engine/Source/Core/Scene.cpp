@@ -19,18 +19,28 @@ void Scene::OnExit() {
 
 void Scene::Start() {
     for (GameObject* gameObject : gameObjects) {
+        if (gameObject->getActive() == false) { 
+            continue; 
+        }
+
         gameObject->Start();
     }
 }
 
 void Scene::Update(float dt) {
     for (GameObject* gameObject : gameObjects) {
+        if (gameObject->getActive() == false) {
+            continue;
+        }
         gameObject->Update(dt);
     }
 }
 
 void Scene::Render(sf::RenderWindow& window) {
     for (GameObject* gameObject : gameObjects) {
+        if (gameObject->getActive() == false) {
+            continue;
+        }
         gameObject->Render(window);
     }
 }

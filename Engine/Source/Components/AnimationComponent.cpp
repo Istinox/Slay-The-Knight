@@ -9,7 +9,7 @@ void AnimationComponent::Start()
 	}
 
 	sf::Sprite& ownerSprite = owner->getComponent<SpriteRenderer>()->getSprite();
-	sf::FloatRect bounds = ownerSprite.getLocalBounds(); // étant donné qu'on prend les bounds locals, l'origine est un peu buggé.
+	sf::FloatRect bounds = ownerSprite.getLocalBounds();
 
 	imageHeight = ownerSprite.getTexture().getSize().y;
 	imageWidth = ownerSprite.getTexture().getSize().x;
@@ -42,6 +42,22 @@ void AnimationComponent::AnimateSprite(float dt)
 	}
 
 	ownerSprite.setTextureRect(sf::IntRect({ positionDraw, 0 }, { 192, 192 }));
+}
+
+void AnimationComponent::ChangeAnimation(std::string name)
+{
+	if (!animations.contains(name)) return;
+
+	auto spriteNamePair = animations.find(name); // La pair nom / sprite dans la liste.
+	sf::Sprite sprite(spriteNamePair->second);
+
+	owner->getComponent<SpriteRenderer>()->setSprite(sprite);
+}
+
+void AnimationComponent::AddAnimation(std::string animationName, std::string filePath)
+{
+	sf::Texture texture = ResourceManager::getTexture(filePath);
+	animations.emplace(animationName, texture);
 }
 
 // Implémenter une méthode qui gère les états d'animations selon la gameState (vitesse, interaction etc..) ?

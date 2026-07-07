@@ -26,6 +26,8 @@ public:
         }
     }
 
+    void setSprite(sf::Sprite newSprite) { sprite = newSprite; }
+
 private:
     float scaleX;
     float scaleY;

@@ -13,7 +13,7 @@ private:
 	float timer = 0.f;
 	float cooldown = 4.f;
 
-	std::map<sf::Sprite, std::string> animations; // Pour stocker toute les animations du gameObject.
+	std::unordered_map<std::string, sf::Texture> animations; // Pour stocker toute les animations du gameObject.
 
 public:
 	void Start() override;
@@ -21,4 +21,5 @@ public:
 	void AnimateSprite(float dt);
 
 	void ChangeAnimation(std::string name);
+	void AddAnimation(std::string animationName, std::string filePath);
 };

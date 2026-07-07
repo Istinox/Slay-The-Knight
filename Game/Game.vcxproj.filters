@@ -60,7 +60,7 @@
     <ClCompile Include="Source\GameObjects\Camera.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Components\RotateToMouse.cpp">
+    <ClCompile Include="Source\Components\HealthComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,7 +92,7 @@
     <ClInclude Include="Header\GameObjects\Camera.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Components\RotateToMouse.h">
+    <ClInclude Include="Header\Components\HealthComponent.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

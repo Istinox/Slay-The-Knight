@@ -10,6 +10,7 @@ Player::Player(const std::string& texturePath, float spd)
 	animationComponent = createComponent<AnimationComponent>();
 	collisionComponent = createComponent<CollisionComponent>(sf::Vector2f(75.f, 75.f), sf::Color::Red, 1.f);
 	rigidBody = createComponent<RigidBody>();
+	healthComponent = createComponent<HealthComponent>(100);
 
 	collisionComponent->setCollisionType(CollisionType::Player);
 }

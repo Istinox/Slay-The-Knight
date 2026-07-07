@@ -19,8 +19,10 @@ public:
 	static InputModule* getInputModule();
 
 	void HandleEvents(sf::RenderWindow& window);
+
 	bool isKeyPressed(sf::Keyboard::Key key);
 	bool isKeyHeld(sf::Keyboard::Key key);
+	bool isKeyReleased(sf::Keyboard::Key key);
 
 	bool isMousePresseds(sf::Mouse::Button mouseButton);
 	bool isMouseHelds(sf::Mouse::Button mouseButton);

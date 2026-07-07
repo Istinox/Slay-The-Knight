@@ -7,11 +7,13 @@ class PlayerController : public Component
 {
 private:
 	float speed;
+	bool isRunning = false;
 public:
 	PlayerController(float spd) {
 		speed = spd;
 	}
 
 	void Update(float dt) override;
+	void SetSpeed(float value) { speed = value; }
 };
 

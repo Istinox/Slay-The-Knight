@@ -16,6 +16,7 @@ void InputModule::HandleEvents(sf::RenderWindow& window)
 
         if (auto keyReleased = event->getIf<sf::Event::KeyReleased>())
         {
+            keyPresseds.erase(keyReleased->code);
             keyHelds.erase(keyReleased->code);
         }
 
@@ -37,9 +38,12 @@ bool InputModule::isKeyPressed(sf::Keyboard::Key key) { return keyPresseds.conta
 
 bool InputModule::isKeyHeld(sf::Keyboard::Key key) { return keyHelds.contains(key); }
 
+bool InputModule::isKeyReleased(sf::Keyboard::Key key) { return !keyHelds.contains(key); }
+
 bool InputModule::isMousePresseds(sf::Mouse::Button mouseKey) { return mousePresseds.contains(mouseKey); }
 
 bool InputModule::isMouseHelds(sf::Mouse::Button mouseKey) { return mouseHelds.contains(mouseKey); }
+
 
 InputModule* InputModule::getInputModule()
 {
