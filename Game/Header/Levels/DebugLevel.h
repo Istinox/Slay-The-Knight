@@ -1,11 +1,12 @@
 //#pragma once
-//#include "Core/Scene.h"
-//#include "Core/GameObject.h"
-//#include "Components/SpriteRenderer.h"
-//#include "Components/InputComponent.h"
-//#include "Components/CollisionComponent.h"
-//#include "Components/TextComponent.h"
-//#include "Components/SoundComponent.h"
+//#include "Scene.h"
+//#include "GameObject.h"
+//#include "SpriteRenderer.h"
+//#include "InputComponent.h"
+//#include "InputComponent.h"
+//#include "CollisionComponent.h"
+//#include "TextComponent.h"
+//#include <SoundComponent.h>
 //
 //class DebugLevel : public Scene
 //{

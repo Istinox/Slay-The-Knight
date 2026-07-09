@@ -1,9 +1,9 @@
 ﻿#include "Core/Engine.h"
 #include "LevelEditor/LevelEditor.h"
 
-#include "MainMenu.h"
-#include "LevelCreator.h"
-#include "Level1.h"
+#include "Levels/MainMenu.h"
+#include "Levels/LevelCreator.h"
+#include "Levels/Level1.h"
 
 int main()
 {

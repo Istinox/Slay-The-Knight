@@ -1,6 +1,6 @@
-﻿#include "MainMenu.h"
+#include "Levels/GameOver.h"
 
-void MainMenu::OnEnter()
+void GameOver::OnEnter()
 {
     const float windowWidth = 1280.f;
     const float windowHeight = 720.f;
@@ -21,10 +21,10 @@ void MainMenu::OnEnter()
     background->createComponent<SpriteRenderer>(backgroundFilePath);
 
     title->createComponent<Transform>(windowWidth / 2, 120.f);
-    title->createComponent<TextComponent>(fontFilePath, "Slay the Knight", sf::Color::Red, sf::Color::Black, 2.f, 75);
+    //title->createComponent<TextComponent>(fontFilePath, "S", sf::Color::Red, sf::Color::Black, 2.f, 75);
 
     subTitle->createComponent<Transform>(windowWidth / 2, 200.f);
-    subTitle->createComponent<TextComponent>(fontFilePath, "Version - Prototype", sf::Color::White, sf::Color::Black, 2.f, 30);
+    //subTitle->createComponent<TextComponent>(fontFilePath, "V", sf::Color::White, sf::Color::Black, 2.f, 30);
 
     buttonStart->createComponent<Transform>(windowWidth / 2, 300.f);
     buttonStart->createComponent<SpriteRenderer>(buttonStartPath);

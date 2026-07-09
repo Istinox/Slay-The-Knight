@@ -8,7 +8,7 @@
 #include <GameObjects/Camera.h>
 #include <Components/CameraComponent.h>
 #include "Components/ShapeComponent.h"
-#include <Components//CollisionComponent.h>
+#include <Components/CollisionComponent.h>
 
 class LevelCreator : public Scene
 {

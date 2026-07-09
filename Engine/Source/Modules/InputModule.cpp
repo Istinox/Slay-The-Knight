@@ -22,7 +22,10 @@ void InputModule::HandleEvents(sf::RenderWindow& window)
 
         if (auto mousePressed = event->getIf<sf::Event::MouseButtonPressed>())
         {
-            mousePresseds.insert(mousePressed->button);
+            if (!mousePresseds.contains(mousePressed->button))
+            {
+                mousePresseds.insert(mousePressed->button);
+            }
             mouseHelds.insert(mousePressed->button);
         }
 
@@ -56,4 +59,7 @@ InputModule* InputModule::getInputModule()
 
 sf::Vector2i InputModule::getMousePosition(sf::RenderWindow& window) { return sf::Mouse::getPosition(window); }
 
-void InputModule::ClearPressed() { keyPresseds.clear(); }
+void InputModule::ClearPressed() { 
+    keyPresseds.clear(); 
+    mousePresseds.clear();
+}

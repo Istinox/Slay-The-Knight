@@ -7,10 +7,9 @@
 #include "Components/InputComponent.h"
 #include "Components/ButtonComponent.h"
 
-#include "LevelCreator.h"
-#include "Level1.h"
+#include "Levels/Level1.h"
 
-class MainMenu : public Scene
+class GameOver : public Scene
 {
 private:
 	WindowModule* windowModule = WindowModule::getWindowModule();
@@ -21,7 +20,8 @@ private:
 	GameObject* buttonStart = nullptr;
 	GameObject* buttonLeave = nullptr;
 public:
-	MainMenu() : Scene("Main Menu") {};
+	GameOver() : Scene("Game Over") {};
 
 	void OnEnter() override;
 };
+

@@ -1,5 +1,6 @@
 #include "Levels/LevelCreator.h"
 
+// Ne pas utiliser pour le moment.
 void LevelCreator::OnEnter()
 {
 	// Le positionnement est étrange je sais, mais bon.. C'est ça ou je dois tout changer dans le CameraComponent.

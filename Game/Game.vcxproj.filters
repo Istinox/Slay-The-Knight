@@ -30,16 +30,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Game.cpp">
+    <ClCompile Include="Source\Levels\Game.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Source\DebugLevel.cpp">
+    <ClCompile Include="Source\Levels\DebugLevel.cpp">
       <Filter>Fichiers sources\Levels</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Level1.cpp">
+    <ClCompile Include="Source\Levels\Level1.cpp">
       <Filter>Fichiers sources\Levels</Filter>
     </ClCompile>
-    <ClCompile Include="Source\MainMenu.cpp">
+    <ClCompile Include="Source\Levels\MainMenu.cpp">
       <Filter>Fichiers sources\Levels</Filter>
     </ClCompile>
     <ClCompile Include="Source\Components\PlayerController.cpp">
@@ -54,7 +54,7 @@
     <ClCompile Include="Source\GameObjects\EnemyKnight.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Source\LevelCreator.cpp">
+    <ClCompile Include="Source\Levels\LevelCreator.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Source\GameObjects\Camera.cpp">
@@ -63,15 +63,18 @@
     <ClCompile Include="Source\Components\HealthComponent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Levels\GameOver.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header\DebugLevel.h">
+    <ClInclude Include="Header\Levels\DebugLevel.h">
       <Filter>Fichiers d%27en-tête\Levels</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Level1.h">
+    <ClInclude Include="Header\Levels\Level1.h">
       <Filter>Fichiers d%27en-tête\Levels</Filter>
     </ClInclude>
-    <ClInclude Include="Header\MainMenu.h">
+    <ClInclude Include="Header\Levels\MainMenu.h">
       <Filter>Fichiers d%27en-tête\Levels</Filter>
     </ClInclude>
     <ClInclude Include="Header\Components\PlayerController.h">
@@ -86,13 +89,16 @@
     <ClInclude Include="Header\GameObjects\EnemyKnight.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Header\LevelCreator.h">
+    <ClInclude Include="Header\Levels\LevelCreator.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Header\GameObjects\Camera.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Header\Components\HealthComponent.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Levels\GameOver.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

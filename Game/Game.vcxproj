@@ -137,26 +137,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Levels\GameOver.cpp" />
     <ClCompile Include="Source\Components\HealthComponent.cpp" />
     <ClCompile Include="Source\GameObjects\Camera.cpp" />
     <ClCompile Include="Source\GameObjects\EnemyKnight.cpp" />
     <ClCompile Include="Source\GameObjects\Player.cpp" />
     <ClCompile Include="Source\GameObjects\Background.cpp" />
-    <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\DebugLevel.cpp" />
-    <ClCompile Include="Source\Level1.cpp" />
-    <ClCompile Include="Source\LevelCreator.cpp" />
-    <ClCompile Include="Source\MainMenu.cpp" />
+    <ClCompile Include="Source\Levels\Game.cpp" />
+    <ClCompile Include="Source\Levels\DebugLevel.cpp" />
+    <ClCompile Include="Source\Levels\Level1.cpp" />
+    <ClCompile Include="Source\Levels\LevelCreator.cpp" />
+    <ClCompile Include="Source\Levels\MainMenu.cpp" />
     <ClCompile Include="Source\Components\PlayerController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Levels\GameOver.h" />
     <ClInclude Include="Header\GameObjects\Camera.h" />
     <ClInclude Include="Header\GameObjects\EnemyKnight.h" />
     <ClInclude Include="Header\GameObjects\Background.h" />
-    <ClInclude Include="Header\DebugLevel.h" />
-    <ClInclude Include="Header\Level1.h" />
-    <ClInclude Include="Header\LevelCreator.h" />
-    <ClInclude Include="Header\MainMenu.h" />
+    <ClInclude Include="Header\Levels\DebugLevel.h" />
+    <ClInclude Include="Header\Levels\Level1.h" />
+    <ClInclude Include="Header\Levels\LevelCreator.h" />
+    <ClInclude Include="Header\Levels\MainMenu.h" />
     <ClInclude Include="Header\Components\PlayerController.h" />
     <ClInclude Include="Header\GameObjects\Player.h" />
     <ClInclude Include="Header\Components\HealthComponent.h" />
