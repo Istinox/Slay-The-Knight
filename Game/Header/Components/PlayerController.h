@@ -8,6 +8,8 @@ class PlayerController : public Component
 private:
 	float speed;
 	bool isRunning = false;
+	bool isWalking = false;
+	bool isAttacking = false;
 public:
 	PlayerController(float spd) {
 		speed = spd;

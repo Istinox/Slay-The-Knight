@@ -14,5 +14,7 @@ Player::Player(const std::string& texturePath, float spd)
 
 	collisionComponent->setCollisionType(CollisionType::Player);
 
+	animationComponent->AddAnimation("Idle", "Assets/Warrior/Warrior_Idle.png");
+	animationComponent->AddAnimation("Walk", "Assets/Warrior/Warrior_Run.png");
 	animationComponent->AddAnimation("Attack", "Assets/Warrior/Warrior_Attack1.png");
 }

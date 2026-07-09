@@ -10,21 +10,46 @@ void PlayerController::Update(float dt)
 	AnimationComponent* animation = owner->getComponent<AnimationComponent>();
 
 	if (input->isKeyHeld(sf::Keyboard::Key::S)) {
+		animation->ChangeAnimation("Walk");
 		transform->setAxisY(transform->getAxisY() + speed * 1 * dt);
+		isWalking = true;
 	}
+
 	else if (input->isKeyHeld(sf::Keyboard::Key::Z)) {
+		animation->ChangeAnimation("Walk");
 		transform->setAxisY(transform->getAxisY() + speed * -1 * dt);
+		isWalking = true;
 	}
 
 	if (input->isKeyHeld(sf::Keyboard::Key::D)) {
+		animation->ChangeAnimation("Walk");
 		transform->setAxisX(transform->getAxisX() + speed * 1 * dt);
-	}
-	else if (input->isKeyHeld(sf::Keyboard::Key::Q)) {
-		transform->setAxisX(transform->getAxisX() + speed * -1 * dt);
+		isWalking = true;
 	}
 
-	else if (input->isMouseHelds(sf::Mouse::Button::Left)) {
+	else if (input->isKeyHeld(sf::Keyboard::Key::Q)) {
+		animation->ChangeAnimation("Walk");
+		transform->setAxisX(transform->getAxisX() + speed * -1 * dt);
+		isWalking = true;
+	}
+
+	// Si aucune touche n'est pressée, le joueur ne marche pas.
+	else if (!input->isKeyHeld(sf::Keyboard::Key::Z) &&
+			 !input->isKeyHeld(sf::Keyboard::Key::S) &&
+			 !input->isKeyHeld(sf::Keyboard::Key::Q) &&
+			 !input->isKeyHeld(sf::Keyboard::Key::D)) 
+	{
+		isWalking = false;
+	}
+
+	if (input->isMouseHelds(sf::Mouse::Button::Left) && !isWalking) {
 		std::cout << "Attaque !" << "\n";
+		animation->ChangeAnimation("Attack");
+		isAttacking = true;
+	}
+	else
+	{
+		isAttacking = false;
 	}
 
 	if (input->isKeyHeld(sf::Keyboard::Key::LShift) && !isRunning)
@@ -39,8 +64,12 @@ void PlayerController::Update(float dt)
 	}
 
 	// Touche de debug à supprimer.
-	else if (input->isKeyPressed(sf::Keyboard::Key::H))
+	if (input->isKeyPressed(sf::Keyboard::Key::H))
 	{
 		owner->getComponent<HealthComponent>()->health = 0;
+	}
+
+	if (!isWalking && !isAttacking) {
+		animation->ChangeAnimation("Idle");
 	}
 }

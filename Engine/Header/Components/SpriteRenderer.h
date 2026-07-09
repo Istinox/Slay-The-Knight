@@ -26,7 +26,7 @@ public:
         }
     }
 
-    void setSprite(sf::Sprite newSprite) { sprite = newSprite; }
+    void setSprite(sf::Sprite& newSprite) { sprite = newSprite; }
     void setTexture(std::string filePath) {
         sprite.value().setTexture(ResourceManager::getTexture(texturePath));
     }

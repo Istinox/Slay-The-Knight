@@ -14,6 +14,7 @@ private:
 	float cooldown = 4.f;
 
 	std::unordered_map<std::string, std::string> animations; // Pour stocker toute les animations du gameObject.
+	std::string currentAnimation = "Idle";
 
 public:
 	void Start() override;

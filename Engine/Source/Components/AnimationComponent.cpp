@@ -47,11 +47,21 @@ void AnimationComponent::AnimateSprite(float dt)
 void AnimationComponent::ChangeAnimation(std::string name)
 {
 	if (!animations.contains(name)) return;
+	if (currentAnimation == name) return; // Si il est déjà dans cette animation.
 
 	auto spriteNamePair = animations.find(name); // La pair nom / sprite dans la liste.
 	std::string texturePath = spriteNamePair->second;
 
-	owner->getComponent<SpriteRenderer>()->setTexture(texturePath);
+	sf::Sprite newSprite = sf::Sprite(ResourceManager::getTexture(texturePath));
+	sf::FloatRect bounds = newSprite.getLocalBounds();
+
+	imageHeight = newSprite.getTexture().getSize().y;
+	imageWidth = newSprite.getTexture().getSize().x;
+	newSprite.setOrigin({ static_cast<float>(imageHeight) / 2.f, static_cast<float>(imageHeight) / 2.f });
+	newSprite.setTextureRect(sf::IntRect({ 0, 0 }, { 192, 192 }));
+
+	owner->getComponent<SpriteRenderer>()->setSprite(newSprite);
+	currentAnimation = spriteNamePair->first;
 }
 
 void AnimationComponent::AddAnimation(std::string animationName, std::string filePath)
