@@ -13,10 +13,13 @@
 class MainMenu : public Scene
 {
 private:
+	WindowModule* windowModule = WindowModule::getWindowModule();
+
 	GameObject* background = nullptr;
 	GameObject* title = nullptr;
 	GameObject* subTitle = nullptr;
-	GameObject* button = nullptr;
+	GameObject* buttonStart = nullptr;
+	GameObject* buttonLeave = nullptr;
 public:
 	MainMenu() : Scene("Main Menu") {};
 

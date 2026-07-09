@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -143,20 +143,20 @@
     <ClCompile Include="Source\GameObjects\Player.cpp" />
     <ClCompile Include="Source\GameObjects\Background.cpp" />
     <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\DebugLevel.cpp" />
-    <ClCompile Include="Source\Level1.cpp" />
-    <ClCompile Include="Source\LevelCreator.cpp" />
-    <ClCompile Include="Source\MainMenu.cpp" />
+    <ClCompile Include="Source\Levels\DebugLevel.cpp" />
+    <ClCompile Include="Source\Levels\Level1.cpp" />
+    <ClCompile Include="Source\Levels\LevelCreator.cpp" />
+    <ClCompile Include="Source\Levels\MainMenu.cpp" />
     <ClCompile Include="Source\Components\PlayerController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Levels\DebugLevel.h" />
     <ClInclude Include="Header\GameObjects\Camera.h" />
     <ClInclude Include="Header\GameObjects\EnemyKnight.h" />
     <ClInclude Include="Header\GameObjects\Background.h" />
-    <ClInclude Include="Header\DebugLevel.h" />
-    <ClInclude Include="Header\Level1.h" />
-    <ClInclude Include="Header\LevelCreator.h" />
-    <ClInclude Include="Header\MainMenu.h" />
+    <ClInclude Include="Header\Levels\Level1.h" />
+    <ClInclude Include="Header\Levels\LevelCreator.h" />
+    <ClInclude Include="Header\Levels\MainMenu.h" />
     <ClInclude Include="Header\Components\PlayerController.h" />
     <ClInclude Include="Header\GameObjects\Player.h" />
     <ClInclude Include="Header\Components\HealthComponent.h" />

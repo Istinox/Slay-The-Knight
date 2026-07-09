@@ -6,9 +6,8 @@ void Level1::OnEnter()
     const int windowHeight = 720;
 
     std::string backgroundFilePath = "Assets/Backgrounds/background.png";
-    std::string characterFilePath = "Assets/placeholder_chr.png"; // J'ai un resourceManager !
+    std::string characterFilePath = "Assets/placeholder_chr.png";
     std::string knightIdleFilePath = "Assets/Warrior/Warrior_Idle.png";
-    // std::string shaderPath = "Assets/Shaders/Light.frag";
 
     background = CreateGameObject<Background>("background", backgroundFilePath);
     player = CreateGameObject<Player>("Player", knightIdleFilePath, 200.f);
