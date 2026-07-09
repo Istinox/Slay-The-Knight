@@ -13,4 +13,6 @@ Player::Player(const std::string& texturePath, float spd)
 	healthComponent = createComponent<HealthComponent>(100);
 
 	collisionComponent->setCollisionType(CollisionType::Player);
+
+	animationComponent->AddAnimation("Attack", "Assets/Warrior/Warrior_Attack1.png");
 }

@@ -13,7 +13,7 @@ private:
 	float timer = 0.f;
 	float cooldown = 4.f;
 
-	std::unordered_map<std::string, sf::Texture> animations; // Pour stocker toute les animations du gameObject.
+	std::unordered_map<std::string, std::string> animations; // Pour stocker toute les animations du gameObject.
 
 public:
 	void Start() override;

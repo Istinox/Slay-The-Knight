@@ -7,7 +7,7 @@ void HealthComponent::Update(float dt)
 		owner->setActive(false);
 		// Code pour changer de scene --> game over.
 	}
-	else
+	else if (health <= 0)
 	{
 		owner->setActive(false);
 	}

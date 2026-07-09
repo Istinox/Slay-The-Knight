@@ -49,15 +49,14 @@ void AnimationComponent::ChangeAnimation(std::string name)
 	if (!animations.contains(name)) return;
 
 	auto spriteNamePair = animations.find(name); // La pair nom / sprite dans la liste.
-	sf::Sprite sprite(spriteNamePair->second);
+	std::string texturePath = spriteNamePair->second;
 
-	owner->getComponent<SpriteRenderer>()->setSprite(sprite);
+	owner->getComponent<SpriteRenderer>()->setTexture(texturePath);
 }
 
 void AnimationComponent::AddAnimation(std::string animationName, std::string filePath)
 {
-	sf::Texture texture = ResourceManager::getTexture(filePath);
-	animations.emplace(animationName, texture);
+	animations.emplace(animationName, filePath);
 }
 
 // Implémenter une méthode qui gère les états d'animations selon la gameState (vitesse, interaction etc..) ?
