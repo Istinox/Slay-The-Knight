@@ -137,6 +137,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\GameObjects\Enemy.cpp" />
     <ClCompile Include="Source\Components\HealthComponent.cpp" />
     <ClCompile Include="Source\GameObjects\Camera.cpp" />
     <ClCompile Include="Source\GameObjects\EnemyKnight.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="Source\Components\PlayerController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\GameObjects\Enemy.h" />
     <ClInclude Include="Header\GameObjects\Camera.h" />
     <ClInclude Include="Header\GameObjects\EnemyKnight.h" />
     <ClInclude Include="Header\GameObjects\Background.h" />

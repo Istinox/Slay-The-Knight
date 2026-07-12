@@ -8,11 +8,13 @@ void Level1::OnEnter()
     std::string backgroundFilePath = "Assets/Backgrounds/background.png";
     std::string characterFilePath = "Assets/placeholder_chr.png";
     std::string knightIdleFilePath = "Assets/Warrior/Warrior_Idle.png";
+    std::string archerIdleFilePath = "Assets/Archer/Archer_Idle.png";
 
     background = CreateGameObject<Background>("background", backgroundFilePath);
     player = CreateGameObject<Player>("Player", knightIdleFilePath, 200.f);
     enemyKnight = CreateGameObject<EnemyKnight>("EnemyKnight", knightIdleFilePath);
     camera = CreateGameObject<Camera>("Camera", 300.f, sf::FloatRect({ 640, 360 }, { 1280, 720 })); // 854x480 = 480p
+    archer = CreateGameObject<Enemy>("EnemyKnight", archerIdleFilePath, sf::Vector2f({200.f, 200.f}));
 
     GameObject* square = CreateGameObject<GameObject>();
     Transform* transformSquare = square->createComponent<Transform>(400.f, 300.f);

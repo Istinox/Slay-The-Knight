@@ -2,6 +2,8 @@
 #include "Core/Component.h"
 #include "CollisionComponent.h"
 
+// Component principalement utilisé (dans ce cas précis) 
+// pour gérer le comportement des GameObjects en cas de collision.
 class RigidBody : public Component
 {
 public:

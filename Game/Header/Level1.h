@@ -15,6 +15,7 @@
 #include "GameObjects/Background.h"
 #include "GameObjects/Player.h"
 #include "GameObjects/EnemyKnight.h"
+#include <GameObjects/Enemy.h>
 #include "GameObjects/Camera.h"
 
 class Level1 : public Scene
@@ -24,6 +25,7 @@ private:
 	Player* player = nullptr;
 	EnemyKnight* enemyKnight = nullptr;
 	Camera* camera = nullptr;
+	Enemy* archer = nullptr;
 public:
 	Level1() : Scene("Level 1") {};
 

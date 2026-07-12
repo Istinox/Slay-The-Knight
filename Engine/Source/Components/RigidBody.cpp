@@ -24,6 +24,7 @@ void RigidBody::OnCollision(GameObject* other)
 	//}
 }
 
+// Gestion des collisions AABB.
 std::pair<float, float> RigidBody::computeOverlap(GameObject* other) {
 
     CollisionComponent* ownerCol = owner->getComponent<CollisionComponent>();

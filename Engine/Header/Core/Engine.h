@@ -16,7 +16,7 @@ private:
     SceneManager* sceneManager = SceneManager::getSceneManager();
     WindowModule* windowModule = WindowModule::getWindowModule();
 
-    std::string iconFilePath = "Assets/HorrorEngine_icon.jpg"; // J'ai un resourceManager ! :D
+    std::string iconFilePath = "Assets/Knight_Icon.png";
     sf::Image icon;
     std::string windowTitle;
 
