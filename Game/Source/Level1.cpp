@@ -2,9 +2,6 @@
 
 void Level1::OnEnter()
 {
-    const int windowWidth = 1280; 
-    const int windowHeight = 720;
-
     std::string backgroundFilePath = "Assets/Backgrounds/background.png";
     std::string characterFilePath = "Assets/placeholder_chr.png";
     std::string knightIdleFilePath = "Assets/Warrior/Warrior_Idle.png";
