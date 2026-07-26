@@ -30,6 +30,10 @@ void SpriteRenderer::Update(float dt) {
     if (!sprite.has_value())
         return;
 
+    // Dans le cas où on a besoin d'inverser le sprite sur l'axe X.
+    if (shouldInvertAxisX)
+        sprite->setScale({ -1.f, 1.f });
+
     sprite->setPosition({ transform->getAxisX(), transform->getAxisY() });
 }
 

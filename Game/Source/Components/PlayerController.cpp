@@ -1,75 +1,75 @@
 ﻿#include "Components/PlayerController.h"
-#include <Components/AnimationComponent.h>
-#include <Components/HealthComponent.h>
 
-// Le PlayerController nous servira à gérer chacun des inputs du joueur, dont ces animations selon ces actions.
+// Le PlayerController sert à gérer chacun des inputs du joueur, dont ces animations selon ces actions.
 void PlayerController::Update(float dt)
 {
-	InputModule* input = InputModule::getInputModule();
-	Transform* transform = owner->getComponent<Transform>();
-	AnimationComponent* animation = owner->getComponent<AnimationComponent>();
+    InputModule* input = InputModule::getInputModule();
+    Transform* transform = owner->getComponent<Transform>();
+    AnimationComponent* animation = owner->getComponent<AnimationComponent>();
+    SpriteRenderer* spriteRenderer = owner->getComponent<SpriteRenderer>();
 
-	if (input->isKeyHeld(sf::Keyboard::Key::S)) {
-		animation->ChangeAnimation("Walk");
-		transform->setAxisY(transform->getAxisY() + speed * 1 * dt);
-		isWalking = true;
-	}
+    float moveX = 0.f;
+    float moveY = 0.f;
+    bool invertAxis = false;
 
-	else if (input->isKeyHeld(sf::Keyboard::Key::Z)) {
-		animation->ChangeAnimation("Walk");
-		transform->setAxisY(transform->getAxisY() + speed * -1 * dt);
-		isWalking = true;
-	}
+    // Déplacements du joueur
+    if (input->isKeyHeld(sf::Keyboard::Key::Q))
+    {
+        moveX -= 1.f;
+        invertAxis = true;
+    }
 
-	if (input->isKeyHeld(sf::Keyboard::Key::D)) {
-		animation->ChangeAnimation("Walk");
-		transform->setAxisX(transform->getAxisX() + speed * 1 * dt);
-		isWalking = true;
-	}
+    if (input->isKeyHeld(sf::Keyboard::Key::D))
+    {
+        moveX += 1.f;
+        invertAxis = false;
+    }
 
-	else if (input->isKeyHeld(sf::Keyboard::Key::Q)) {
-		animation->ChangeAnimation("Walk");
-		transform->setAxisX(transform->getAxisX() + speed * -1 * dt);
-		isWalking = true;
-	}
+    if (input->isKeyHeld(sf::Keyboard::Key::Z))
+    {
+        moveY -= 1.f;
+    }
 
-	// Si aucune touche n'est pressée, le joueur ne marche pas.
-	else if (!input->isKeyHeld(sf::Keyboard::Key::Z) &&
-			 !input->isKeyHeld(sf::Keyboard::Key::S) &&
-			 !input->isKeyHeld(sf::Keyboard::Key::Q) &&
-			 !input->isKeyHeld(sf::Keyboard::Key::D)) 
-	{
-		isWalking = false;
-	}
+    if (input->isKeyHeld(sf::Keyboard::Key::S))
+    {
+        moveY += 1.f;
+    }
 
-	if (input->isMouseHelds(sf::Mouse::Button::Left) && !isWalking) {
-		std::cout << "Attaque !" << "\n";
-		animation->ChangeAnimation("Attack");
-		isAttacking = true;
-	}
-	else
-	{
-		isAttacking = false;
-	}
+    // Sprint
+    isRunning = input->isKeyHeld(sf::Keyboard::Key::LShift);
+    SetSpeed(isRunning ? 325.f : 200.f); // Si le joueur court --> Speed à 325.f, sinon 200.f
 
-	if (input->isKeyHeld(sf::Keyboard::Key::LShift) && !isRunning)
-	{
-		SetSpeed(325.f);
-		isRunning = true;
-	}
-	else if (input->isKeyReleased(sf::Keyboard::Key::LShift) && isRunning)
-	{
-		SetSpeed(200.f);
-		isRunning = false;
-	}
+    // Animation de marche
+    isWalking = (moveX != 0.f || moveY != 0.f);
 
-	// Touche de debug à supprimer.
-	if (input->isKeyPressed(sf::Keyboard::Key::H))
-	{
-		owner->getComponent<HealthComponent>()->health = 0;
-	}
+    if (isWalking)
+    {
+        transform->setAxisX(transform->getAxisX() + moveX * speed * dt);
+        transform->setAxisY(transform->getAxisY() + moveY * speed * dt);
 
-	if (!isWalking && !isAttacking) {
-		animation->ChangeAnimation("Idle");
-	}
+        animation->ChangeAnimation("Walk");
+    }
+
+    // Animation d'attaque
+    isAttacking = input->isMouseHelds(sf::Mouse::Button::Left) && !isWalking;
+
+    if (isAttacking)
+    {
+        std::cout << "Attaque !" << std::endl;
+        animation->ChangeAnimation("Attack");
+    }
+
+    // Animation Idle
+    if (!isWalking && !isAttacking)
+    {
+        animation->ChangeAnimation("Idle");
+    }
+
+    // Touche de debug à supprimer.
+    if (input->isKeyPressed(sf::Keyboard::Key::H))
+    {
+        owner->getComponent<HealthComponent>()->health = 0;
+    }
+
+    spriteRenderer->SetShouldInvertAxisX(invertAxis);
 }

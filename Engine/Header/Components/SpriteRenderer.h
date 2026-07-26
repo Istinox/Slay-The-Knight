@@ -2,11 +2,12 @@
 #include <optional>
 #include "Core/Component.h"
 #include "Core/GameObject.h"
-
 #include "ShaderComponent.h"
 
 class SpriteRenderer : public Component
 {
+private:
+    bool shouldInvertAxisX = false;
 public:
     SpriteRenderer(const std::string& path, float sX = 1.f, float sY = 1.f) : texturePath(path) {
         scaleX = sX;
@@ -27,15 +28,14 @@ public:
     }
 
     void setSprite(sf::Sprite& newSprite) { sprite = newSprite; }
-    void setTexture(std::string filePath) {
-        sprite.value().setTexture(ResourceManager::getTexture(texturePath));
-    }
+    void setTexture(std::string filePath) { sprite.value().setTexture(ResourceManager::getTexture(texturePath)); }
+    void SetShouldInvertAxisX(bool& value) { shouldInvertAxisX = value; }
 
 private:
     float scaleX;
     float scaleY;
     std::string texturePath;
-    std::optional<sf::Sprite> sprite; // Absolute peak (made in chatGPT)
+    std::optional<sf::Sprite> sprite;
     sf::Shader* shader = nullptr;
 };
 

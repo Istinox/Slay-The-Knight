@@ -17,7 +17,7 @@ private:
 	TypeMovement movementMode = TypeMovement::Manual;
 public:
 
-	CameraComponent(float _speed, sf::FloatRect _PositionAndSize, TypeMovement _movementMode = TypeMovement::Manual);
+	CameraComponent(float _speed, sf::FloatRect _PositionAndSize, TypeMovement _movementMode = TypeMovement::Automatic);
 
 	void Start() override;
 	void Update(float deltaTime) override;

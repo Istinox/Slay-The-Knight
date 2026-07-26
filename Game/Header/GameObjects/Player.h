@@ -6,6 +6,7 @@
 #include <Components/CollisionComponent.h>
 #include <Components/RigidBody.h>
 #include <Components/HealthComponent.h>
+#include <Components/CameraComponent.h>
 
 class Player : public GameObject
 {
@@ -18,6 +19,7 @@ private:
 	CollisionComponent* collisionComponent;
 	RigidBody* rigidBody;
 	HealthComponent* healthComponent;
+	CameraComponent* cameraComponent;
 
 public:
 	Player(const std::string& texturePath, float spd);

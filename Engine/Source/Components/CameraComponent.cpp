@@ -25,28 +25,17 @@ void CameraComponent::Update(float deltaTime)
 
 	switch (movementMode) 
 	{
-	case TypeMovement::Manual:
+	case TypeMovement::Automatic:
 	{
-		if (input->isKeyHeld(sf::Keyboard::Key::Down)) {
-			transform->setAxisY(transform->getAxisY() + speed * 1 * deltaTime);
-		}
-		else if (input->isKeyHeld(sf::Keyboard::Key::Up)) {
-			transform->setAxisY(transform->getAxisY() + speed * -1 * deltaTime);
-		}
-
-		if (input->isKeyHeld(sf::Keyboard::Key::Right)) {
-			transform->setAxisX(transform->getAxisX() + speed * 1 * deltaTime);
-		}
-		else if (input->isKeyHeld(sf::Keyboard::Key::Left)) {
-			transform->setAxisX(transform->getAxisX() + speed * -1 * deltaTime);
-		}
+		transform->setAxisX(transform->getAxisX());
+		transform->setAxisY(transform->getAxisY());
 
 		camera.setCenter({ transform->getAxisX(), transform->getAxisY() });
 		windowModule->getWindow().setView(camera);
 
 		break;
 	}
-	case TypeMovement::Automatic:
+	case TypeMovement::Manual:
 	{
 		camera.setCenter({ transform->getAxisX(), transform->getAxisY() });
 		windowModule->getWindow().setView(camera);

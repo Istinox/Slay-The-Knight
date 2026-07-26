@@ -11,6 +11,7 @@ Player::Player(const std::string& texturePath, float spd)
 	collisionComponent = createComponent<CollisionComponent>(sf::Vector2f(75.f, 75.f), sf::Color::Red, 1.f);
 	rigidBody = createComponent<RigidBody>();
 	healthComponent = createComponent<HealthComponent>(100);
+	cameraComponent = createComponent<CameraComponent>(300.f, sf::FloatRect({ 640, 360 }, { 1280, 720 }));
 
 	collisionComponent->setCollisionType(CollisionType::Player);
 
