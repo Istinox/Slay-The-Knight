@@ -30,4 +30,6 @@ public:
 	Level1() : Scene("Level 1") {};
 
 	void OnEnter() override; 
+
+	GameObject* CreateCollisionBox(const sf::Vector2f& position, const sf::Vector2f& size, CollisionType type);
 };

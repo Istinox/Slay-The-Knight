@@ -10,19 +10,21 @@ void PlayerController::Update(float dt)
 
     float moveX = 0.f;
     float moveY = 0.f;
-    bool invertAxis = false;
+    bool invertAxisX = false;
 
     // Déplacements du joueur
     if (input->isKeyHeld(sf::Keyboard::Key::Q))
     {
         moveX -= 1.f;
-        invertAxis = true;
+        invertAxisX = true;
+        spriteRenderer->SetShouldInvertAxisX(invertAxisX);
     }
 
     if (input->isKeyHeld(sf::Keyboard::Key::D))
     {
         moveX += 1.f;
-        invertAxis = false;
+        invertAxisX = false;
+        spriteRenderer->SetShouldInvertAxisX(invertAxisX);
     }
 
     if (input->isKeyHeld(sf::Keyboard::Key::Z))
@@ -37,9 +39,9 @@ void PlayerController::Update(float dt)
 
     // Sprint
     isRunning = input->isKeyHeld(sf::Keyboard::Key::LShift);
-    SetSpeed(isRunning ? 325.f : 200.f); // Si le joueur court --> Speed à 325.f, sinon 200.f
+    SetSpeed(isRunning ? speed + 125.f : speed); // Si le joueur court --> Speed augmente, sinon il reviens à sa valeur initiale.
 
-    // Animation de marche
+    // Animation de marche / gestion de la position
     isWalking = (moveX != 0.f || moveY != 0.f);
 
     if (isWalking)
@@ -70,6 +72,4 @@ void PlayerController::Update(float dt)
     {
         owner->getComponent<HealthComponent>()->health = 0;
     }
-
-    spriteRenderer->SetShouldInvertAxisX(invertAxis);
 }

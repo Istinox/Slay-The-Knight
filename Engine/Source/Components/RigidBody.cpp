@@ -18,10 +18,6 @@ void RigidBody::OnCollision(GameObject* other)
 	{
 		ownerTransform->setPosition(ownerTransform->getPreviousPosition());
 	}
-
-	//if (other->getName() == "EnemyKnight")
-	//{
-	//}
 }
 
 // Gestion des collisions AABB.
