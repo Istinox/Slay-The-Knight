@@ -24,7 +24,7 @@ void MainMenu::OnEnter()
     title->createComponent<TextComponent>(fontFilePath, "Slay the Knight", sf::Color::Red, sf::Color::Black, 2.f, 75);
 
     subTitle->createComponent<Transform>(windowWidth / 2, 200.f);
-    subTitle->createComponent<TextComponent>(fontFilePath, "Version - Prototype", sf::Color::White, sf::Color::Black, 2.f, 30);
+    subTitle->createComponent<TextComponent>(fontFilePath, "Version - 1.0.0", sf::Color::White, sf::Color::Black, 2.f, 30);
 
     buttonStart->createComponent<Transform>(windowWidth / 2, 300.f);
     buttonStart->createComponent<SpriteRenderer>(buttonStartPath);
